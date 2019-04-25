@@ -5,25 +5,23 @@ public class Merchant extends Player{
     
 
     public Merchant(Player lastPlayer){
-        super.setClass("Merchant",lastPlayer.getmaxHp(),lastPlayer.getlvl(),lastPlayer.getDmg(),lastPlayer.getCoin(),lastPlayer.bag);
-        super.skillList.add("Cart Attack Coin -10 DMG x 10");
-    }
-    public void showSkillList(){
-        int i=0;
-        for (String skill : skillList) {
-            System.out.println((i+1)+". "+skill);
-            i++;
-        }
+        super.setClass("Merchant",lastPlayer.getmaxHp(),lastPlayer.getlvl(),lastPlayer.getDmg(),lastPlayer.getCoin(),lastPlayer.bag,lastPlayer.getClassJop(),lastPlayer.bagB,lastPlayer.getKillCount());
+        super.skillList.add("Cart Attack -10 coin");
+        super.skillList.add("Coin Heal -10 coin");
     }
     public int useSkill(int select){
         if(select==1){
             if(super.getCoin() >= 10){
-                return super.getDmg()*10;
+            super.useCoin(-10);
+            return super.getDmg()*10;
             }
-            else{
-                System.out.println("Not Enough COIN!!!!!");
+        }
+        if(select==2){
+            if(super.getCoin() >= 5){
+            super.useCoin(-10);
+            return super.getDmg()*3;
             }
         }
         return 0;
-    }    
+    }
 }

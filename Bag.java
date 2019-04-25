@@ -8,7 +8,7 @@ public class Bag {
     public Bag(){
         items = new ArrayList<Item>();
         bagSize = 10;
-        items.add(new Item("Potion",3));
+        items.add(new Item("Potion",1));
     }
 
     public void showitem(){

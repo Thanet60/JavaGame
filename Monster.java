@@ -21,39 +21,35 @@ public class Monster {
     }
     public void selectmonster(int idMonster){
         if(idMonster == 1){
-            monsterName = "Dark Lord";
+            monsterName = "Green";
             maxHp = 30;
             hpMonster = maxHp;
             expMonster = 10;
             monsterDmg = 10;
-            itemMonster = "Potion";
             coinDrop = 5;
         }
         if(idMonster == 2){
-            monsterName = "Baphomet";
+            monsterName = "Blue";
             maxHp = 60;
             hpMonster = maxHp;
             expMonster = 20;
             monsterDmg = 20;
-            itemMonster = "Super Potion";
             coinDrop = 10;
         }
         if(idMonster == 3){
-            monsterName = "FaceMeKak";
-            maxHp = 150;
+            monsterName = "Purple";
+            maxHp = 500;
             hpMonster = maxHp;
             expMonster = 50;
-            monsterDmg = 40;
-            itemMonster = "Hyper Potion";
+            monsterDmg = 100;
             coinDrop = 15;
         }
-        if(idMonster == 6){
-            monsterName = "Test Class Job";
+        if(idMonster == 4){
+            monsterName = "Cheat";
             maxHp = 10;
             hpMonster = maxHp;
             expMonster = 450;
             monsterDmg = 10;
-            itemMonster = "Restoration";
             coinDrop = 100000;
         }
     }

@@ -12,25 +12,13 @@ public class Item {
         itemName  = name;
         itemAmount = number;
         if(name.equals("Potion")){
-            healAmount = 25;
-            mpAmount = 10;
+            healAmount = 50;
         }
         else if(name.equals("Super Potion")){
-            healAmount = 50;
-            mpAmount = 20;
+            healAmount = 100;
         }
         else if(name.equals("Hyper Potion")){
-            healAmount = 75;
-            mpAmount =30;
-        }
-        else if(name.equals("Max Potion")){
-            healAmount = 100;
-            mpAmount = 40;
-        }
-        else if(name.equals("Restoration")){
-            healAmount = 9999;
-            mpAmount = 9999;
-        }
+            healAmount = 150;}
     }
 
     public String getItemName(){
@@ -38,7 +26,7 @@ public class Item {
     }
 
     public String getItemNameAndValue(){
-        return itemName + " HP+" + healAmount + "MP+" + mpAmount;
+        return itemName + " HP+" + healAmount ;
     }
 
     public int getAmount(){

@@ -8,9 +8,11 @@ public class Player {
     private int maxHp;
     private int myDmg;
     private int coin;
-    private String name;
+    private int classJop;
     private String jobClass;
     public Bag bag ;
+    public BagB bagB ;
+    public int killCount;
     ArrayList<String> skillList;
 
     public Player() {
@@ -20,11 +22,15 @@ public class Player {
         hp = maxHp;
         exp = 0;
         myDmg = 10;
+        classJop = 0;
+        coin = 0;
+        killCount =0 ;
         bag = new Bag();
+        bagB = new BagB();
         skillList = new ArrayList<String>();
     }
 
-    public void setClass(String newClass,int newHp,int newLv,int newDmg,int newCoin,Bag newbag){
+    public void setClass(String newClass,int newHp,int newLv,int newDmg,int newCoin,Bag newbag,int newClassJob,BagB newBagB,int newKillCount){
         jobClass = newClass;
         maxHp = newHp;
         level = newLv;
@@ -32,14 +38,26 @@ public class Player {
         myDmg = newDmg;
         bag = newbag;
         hp = maxHp;
+        classJop = newClassJob;
+        bagB = newBagB;
+        killCount = newKillCount;
+
     }
     
-    public String getName(){
-        return name;
+    public int getKillCount(){
+        return killCount;
+    }
+
+    public void setKillCount(){
+        killCount += 1;
     }
 
     public String getJobClass(){
         return jobClass;
+    }
+
+    public int getClassJop(){
+        return classJop;
     }
 
     public int getmaxHp(){
@@ -64,7 +82,11 @@ public class Player {
     public int getCoin(){
         return coin;
     }
-    
+
+    public void setClassJop(int a){
+        classJop = a;
+    }
+
     public void showAllStatus(){
         System.out.println("Class: " + jobClass);
         System.out.println("Level: " + level);
@@ -98,14 +120,13 @@ public class Player {
             maxHp = maxHp + 20;
             hp = maxHp;
             myDmg += level + 1;
-            System.out.println("Level Up!!!!!");
         }
     }
     
     public void resurrection() {
         hp = maxHp / 2;
-        coin = 0;
-        System.out.println("You Die!");
+        exp = exp/2;
+        coin = coin-100;
     }
 
     public void usepotion(int index){

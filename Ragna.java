@@ -36,7 +36,7 @@ public class Ragna {
                 System.out.println("*****************************************");
                 System.out.println("Select Monster");
                 System.out.println("*****************************************");
-                System.out.println("1. Dark Lord");
+                System.out.println("1. Slime");
                 System.out.println("2. Baphomet");
                 System.out.println("3. FaceMeKak");
                 System.out.println("4. Test Class Job");
@@ -54,7 +54,7 @@ public class Ragna {
                     System.out.println("1.Attack DMG "+novice.getDmg());
                     System.out.println("2.Skill Attack");
                     System.out.println("3.Bag");
-                    System.out.println("3.Run");
+                    System.out.println("4.Run");
                     System.out.println("*****************************************");
                     int selectAttack = scanner.nextInt();
                     if (selectAttack == 1) {
